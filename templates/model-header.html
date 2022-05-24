@@ -1,0 +1,13 @@
+<meta charset="UTF-8">
+<title>Agenda</title>
+<div align="right">    
+    <label> Bem-Vindo
+        {% if request.user.is_authenticated %}
+            {{ request.user.username|title }}
+        {% else %}
+            <p>User is not logged in :(</p>
+        {% endif %} | 
+    </label>
+    <a href="/logout">Logout</a><br>
+</div>
+<h1>Agenda</h1>
